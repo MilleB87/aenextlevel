@@ -31,24 +31,74 @@
     </section>
 
 
- 
-
-</main>
+    <!-- Träningar -->
+<section class="section">
+    <div class="wrap">
+      <h2>Träna med oss</h2>
   
+      <!-- Knapparna -->
+      <div class="pill-toggle" id="trainingToggle">
+        <button class="pill active" data-filter="all">Alla</button>
+        <button class="pill" data-filter="individuell">Träna individuellt</button>
+        <button class="pill" data-filter="grupp">Träna i grupp</button>
+      </div>
+  
+      <!-- Lista med träningsblock som ska filtreras -->
+      <div id="trainingList">
+  
+        <!-- Individuell -->
+        <div class="about training-item" data-type="individuell">
+          <div class="img-placeholder1">
+            <img src="Milian3.jpg" alt="Individuell träning">
+          </div>
+  
+          <!-- Använd gärna .about-text om du redan har CSS för den -->
+          <div class="about-text">
+            <h3>Träna Individuellt</h3>
+            <p>Vill du ha full fokus på dig själv och din utveckling?
+              I vår individuella träning står du i centrum, här anpassas varje övning efter dina
+              styrkor, behov och mål. Med personlig coachning får du mer bolltid och direkt
+              feedback för att ta ditt spel till nästa nivå.</p>
+            <p>Upplägg: 1 spelare</p>
+          </div>
+        </div>
+  
+        <!-- Grupp -->
+        <div class="about training-item" data-type="grupp">
+          <div class="img-placeholder1">
+            <img src="Grupp2.png" alt="Gruppträning">
+          </div>
+  
+          <div class="about-text">
+            <h3>Träna i grupp</h3>
+            <p>Gruppträningen är perfekt för dig som vill utvecklas tillsammans med andra,
+              samtidigt som du får mycket individuell feedback. Här tränar vi i små grupper
+              med fokus på teknik, spelförståelse, glädje och samarbete på ett tryggt och
+              inspirerande sätt.</p>
+            <p>Upplägg: Max 5 spelare/grupp</p>
+          </div>
+        </div>
+  
+      </div><!-- /#trainingList -->
+    </div><!-- /.wrap -->
+  </section>
+  
+  
+  <!--
   <section id="om-oss" class="section">
     <div class="wrap about">
-      <div class="img-placeholder">
+      <div class="img-placeholder1">
           <img src="Milian3.jpg" alt="Adam tränar">
         </div>
         
-      <div class="about-text">
+      <div class="about-text1">
         <h2>Individuell Träning</h2>
         <p>Vill du ha full fokus på dig själv och din utveckling?
            I vår individuella träning står du i centrum, här anpassas varje övning efter dina styrkor, behov och mål. 
            Med personlig coachning får du mer bolltid och direkt feedback  för att ta ditt spel till nästa nivå.</p>
            
             <p>Upplägg: 1 spelare <BR>
-            Pris: 500kr/timmen
+            
             
            </p>
       </div>
@@ -56,19 +106,19 @@
   </section>
   <section id="om-oss" class="section">
     <div class="wrap about">
-      <div class="img-placeholder">
+      <div class="img-placeholder1">
           <img src="Grupp2.png" alt="Adam tränar">
         </div>
         
-      <div class="about-text">
+      <div class="about-text1">
         <h2>Gruppträning</h2>
         <p>Gruppträningen är perfekt för dig som vill utvecklas tillsammans med andra, samtidigt som du får mycket individuell feedback. 
             Här tränar vi i små grupper med fokus på teknik, spelförståelse, glädje och samarbete på ett tryggt och inspirerande sätt.</p>
             
              <p>Upplägg: Max 5 spelare/grupp <BR>
-             Pris: 200kr/timmen
              
-            </p>
+             
+            </p> -->
       </div>
     </div>
   </section>
@@ -82,11 +132,30 @@
   
       <div class="footer-social">
         <a href="https://instagram.com/aenextlevel" target="_blank"><i class="fab fa-instagram"></i></a>
-        <a href="https://facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+        <a href="https://facebook.com/aenextlevel" target="_blank"><i class="fab fa-facebook"></i></a>
         <a href="http://www.youtube.com/@AE-NextLevel" target="_blank"><i class="fab fa-youtube"></i></a>
         <a href="https://tiktok.com/@ae_nextlevel" target="_blank"><i class="fab fa-tiktok"></i></a>
       </div>
     </div>
   </footer>
+
+  <script>
+    const tButtons = document.querySelectorAll('#trainingToggle .pill');
+    const tItems   = document.querySelectorAll('#trainingList .training-item');
+  
+    tButtons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        // byt aktiv knapp
+        tButtons.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+  
+        // filtrera
+        const f = btn.dataset.filter; // "all" | "individuell" | "grupp"
+        tItems.forEach(it => {
+          it.style.display = (f === 'all' || it.dataset.type === f) ? '' : 'none';
+        });
+      });
+    });
+  </script>
 </body>
 </html>
