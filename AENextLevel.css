@@ -1,19 +1,66 @@
 /* === Bas === */
 * { box-sizing: border-box; }
-:root { --bg: #000000; --text: #ffffff; --muted: #666; --line: #e5e7eb; --hero: #f1eeee; --accent: #ffffff; --max: 1100px; }
+:root { 
+    --bg: #000000; 
+    --text: #ffffff; 
+    --muted: #666; 
+    --line: #e5e7eb; 
+    --hero: #f1eeee; 
+    --accent: #ffffff; 
+    --max: 1100px; }
+
 html, body { height: 100%; }
-body { margin: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; color: var(--text); background: var(--bg); line-height: 1.3; }
-.wrap { max-width: var(--max); margin: 0 auto; padding: 0 1rem; }
+
+body { 
+    margin: 0; 
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, sans-serif; 
+    color: var(--text); 
+    background: var(--bg); 
+    line-height: 1.3; }
+
+.wrap { 
+    max-width: var(--max); 
+    margin: 0 auto; 
+    padding: 0 1rem; }
 
 /* === Header === */
-.site-header { position: sticky; top: 0; background: #000000; border-bottom: 0px solid var(--line); z-index: 10; }
-.site-header .wrap { display: flex; align-items: center; justify-content: space-between; padding: 0.1rem 1rem; }
+.site-header { 
+    position: sticky; 
+    top: 0; 
+    background: #000000; 
+    border-bottom: 0px solid var(--line); 
+    z-index: 10; }
 
-.brand { font-weight: 700; letter-spacing: .02em; }
-nav { display: flex; align-items: center; gap: 1rem; }
-nav a { color: #ffffff; text-decoration: none; font-weight: 500; }
-nav a:hover { text-decoration: underline; }
-.menu { border: 1px solid var(--line); background: #fff; padding: .4rem .6rem; border-radius: .4rem; display: none; }
+.site-header .wrap { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    padding: 0.1rem 1rem; }
+
+.brand { 
+    font-weight: 700; 
+    letter-spacing: .02em; }
+
+nav { 
+    display: flex; 
+    align-items: center; 
+    gap: 1rem; }
+
+nav a { 
+    color: #ffffff; 
+    text-decoration: none; 
+    font-weight: 500; }
+
+nav a:hover { 
+    text-decoration: underline; }
+
+.menu { 
+    border: 1px solid var(--line); 
+    background: #fff; 
+    padding: .4rem .6rem; 
+    border-radius: .4rem; 
+    display: none; }
+
 .site-header.overlay {
     position: absolute;
     top: 0;
@@ -60,21 +107,44 @@ nav a:hover { text-decoration: underline; }
     border-radius: 70px;
     border: 4px solid #ffffff;
     box-shadow: 0 0 20px rgba(0,0,0,0.4);
-
   }
   
-.hero-inner { padding: 1rem 0;  text-align: center; }
-.hero h1 { margin: 0 0 .5rem; font-size: clamp(1.8rem, 3.5vw + 1rem, 3rem); line-height: 1.15; letter-spacing: .01em; text-shadow: 3px 3px 6px rgba(0,0,0,0.6); }
-.hero p { margin: 0 0 1.2rem; color: #ffffff; }
-.btn { display: inline-block; padding: .75rem 1.1rem; border-radius: .5rem; text-decoration: none; font-weight: 600; border: 1px solid #111; }
-.btn-accent { background: var(--accent); color: #111; border-color: #111; }
-.btn-accent:hover { filter: brightness(.95); }
+.hero-inner { 
+    padding: 1rem 0;  
+    text-align: center; }
+
+.hero h1 { 
+    margin: 0 0 .5rem; 
+    font-size: clamp(1.8rem, 3.5vw + 1rem, 3rem); 
+    line-height: 1.15; letter-spacing: .01em; 
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.6); }
+
+.hero p { 
+    margin: 0 0 1.2rem; 
+    color: #ffffff; }
+
+.btn { 
+    display: inline-block; 
+    padding: .75rem 1.1rem; 
+    border-radius: .5rem; 
+    text-decoration: none; 
+    font-weight: 600; 
+    border: 1px solid #111; }
+
+.btn-accent { 
+    background: var(--accent); 
+    color: #111; 
+    border-color: #111; }
+
+.btn-accent:hover { 
+    filter: brightness(.95); }
 
 /* === Sektioner === */
-
-
-.section { padding: 1 rem 0; }             /* avståndet mellan sektionerna */
-p { margin: 0 0 1rem; }                     /* styckesavståndet*/
+.section { 
+    padding: 1 rem 0; }    
+             /* avståndet mellan sektionerna */
+p { 
+    margin: 0 0 1rem; }                     /* styckesavståndet*/
 
 .about { 
     display: grid; 
@@ -97,7 +167,7 @@ p { margin: 0 0 1rem; }                     /* styckesavståndet*/
   
   .about-text p {
     margin-top: 0;         /* ingen extra toppmarginal */
-    margin-bottom: 1rem;   /* lagom avstånd mellan stycken */
+    margin-bottom: 0.5rem;   /* lagom avstånd mellan stycken */
     line-height: 22px;
   }
   
@@ -144,17 +214,39 @@ p { margin: 0 0 1rem; }                     /* styckesavståndet*/
     border-radius: 4px;  /* lite rundade hörn, valfritt */
   }
 
-
-
   #tjanster .cards {
     margin-top: 1rem;
   }
   
-.cards { list-style: none; padding: 0; margin: 0; display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
-.card { border: 1px solid var(--line); border-radius: .75rem; padding: 1rem; background: #fff; text-align: left; }
+.cards { 
+    list-style: none; 
+    padding: 0; 
+    margin: 0; 
+    display: grid; 
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1rem; }
+
+.card { 
+    border: 1px solid var(--line); 
+    border-radius: .75rem; 
+    padding: 1rem; 
+    background: #fff; 
+    text-align: left; }
+
 .card h3 { margin: .6rem 0 .4rem; font-size: 1.05rem; color: #000000; margin-top: 0.2rem;}
 .card p { margin: 0; color: var(--muted); line-height: 21px; font-size: 1 rem; margin-top: 0.2rem;}
 .card-icon { height: 56px; border: 1px solid var(--line); background: #f9fafb; border-radius: .5rem; }
+.card-link {
+    display: block;           /* gör hela kortet klickbart */
+    text-decoration: none;    /* tar bort länk-stil */
+    color: inherit;           /* behåller textfärgen */
+  }
+
+  .card:hover {
+    transform: scale(1.01); /* gör kortet 5% större */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25); /* lite skugga */
+  z-index: 2; /* gör så att det "ligger över" de andra när man hovrar */
+  }  
 
 .split-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 2rem; align-items: start;}
 .split-inner h2 { margin-bottom: 0.2rem; margin-top: 3rem;}
@@ -183,9 +275,21 @@ button { cursor: pointer; font: inherit; }
   .contact-left h2, .contact-right h2 { margin-top: 2; }
   .contact-right form { display: grid; gap: .75rem; margin-bottom: 2rem; margin-top: 2rem;}
   
+  .contact-left a {
+    color: #fff;             /* gör texten vit */
+    text-decoration: none;   /* tar bort understrykning */
+    font-weight: 500;        /* lite mer tydlig text */
+    transition: color 0.3s ease;
+  }
+  
+  .contact-left a:hover {
+    color: #e6007e;          /* ändra till rosa när man hovrar */
+    text-decoration: underline; /* valfritt: lägg till underline på hover */
+  }
   /* Ikoner i vänsterkolumnen */
   .contact-left i { margin-right: 8px; }
-  
+
+  .social {margin-bottom: 2rem;}
   /* Social-ikoner */
   .social a i { font-size: 35px; margin-right: 12px; color: #fff; }
   .social a:hover i { color: #e6007e; }
@@ -240,6 +344,18 @@ button { cursor: pointer; font: inherit; }
     color: #e6007e;
     transform: scale(1.2);
   }
+  .footer-contact a {
+    color: #fff;             /* gör texten vit */
+    text-decoration: none;   /* tar bort understrykning */
+    font-weight: 500;        /* lite mer tydlig text */
+    transition: color 0.3s ease;
+  }
+  
+  .footer-contact a:hover {
+    color: #e6007e;          /* ändra till rosa när man hovrar */
+    text-decoration: underline; /* valfritt: lägg till underline på hover */
+  }
+  
   
   .pill-toggle {
     display: flex;
@@ -264,6 +380,32 @@ button { cursor: pointer; font: inherit; }
     color: #aaa;
     margin-top: .25rem;
   }
+
+
+  .video-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 format */
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* valfritt: svart bakgrund innan videon laddar */
+    border-radius: 12px; /* rundade hörn om du vill */
+    border: 6px solid #ffffff; /* <-- Lägg till ram här */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4); /* valfritt, skugga */
+}
+  
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
+  
   
 /* === Responsivitet === */
 @media (max-width: 900px) {
