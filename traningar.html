@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <meta name="description" content="Träning som tar dig till nästa nivå – individuell teknik, små grupper och camps." />
+  <meta name="description" content="Träning som tar dig till nästa nivå – individuell och små grupper." />
   <link rel="stylesheet" href="AENextLevel.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -41,6 +41,7 @@
         <button class="pill active" data-filter="all">Alla</button>
         <button class="pill" data-filter="individuell">Träna individuellt</button>
         <button class="pill" data-filter="grupp">Träna i grupp</button>
+        <button class="pill" data-filter="gratis">Provträna gratis</button>
       </div>
   
       <!-- Lista med träningsblock som ska filtreras -->
@@ -79,8 +80,24 @@
           </div>
         </div>
   
-      </div><!-- /#trainingList -->
-    </div><!-- /.wrap -->
+      <!-- /#trainingList -->
+    <!-- /.wrap -->
+
+    <div class="about training-item" data-type="gratis">
+        <div class="img-placeholder1">
+          <img src="Gratis1.png" alt="Provträna gratis">
+        </div>
+
+        <!-- Använd gärna .about-text om du redan har CSS för den -->
+        <div class="about-text">
+          <h3>Provträna gratis</h3>
+          <p>Hos oss på AE Next Level är första träningen alltid gratis. 
+            Vi vill att både spelare och föräldrar ska känna sig trygga och motiverade innan ni bestämmer er. 
+            Kom och prova på vår träning, helt utan kostnad eller bindning.</p>
+        </div>
+      </div>
+    </div>
+</div>
   </section>
   
   
@@ -150,7 +167,7 @@
         btn.classList.add('active');
   
         // filtrera
-        const f = btn.dataset.filter; // "all" | "individuell" | "grupp"
+        const f = btn.dataset.filter; // "all" | "individuell" | "grupp" | "gratis"
         tItems.forEach(it => {
           it.style.display = (f === 'all' || it.dataset.type === f) ? '' : 'none';
         });

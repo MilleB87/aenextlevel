@@ -233,9 +233,25 @@ p {
     background: #fff; 
     text-align: left; }
 
-.card h3 { margin: .6rem 0 .4rem; font-size: 1.05rem; color: #000000; margin-top: 0.2rem;}
-.card p { margin: 0; color: var(--muted); line-height: 21px; font-size: 1 rem; margin-top: 0.2rem;}
-.card-icon { height: 56px; border: 1px solid var(--line); background: #f9fafb; border-radius: .5rem; }
+.card h3 { 
+    margin: .6rem 0 .4rem; 
+    font-size: 1.05rem; 
+    color: #000000; 
+    margin-top: 0.2rem;}
+
+.card p { 
+    margin: 0; 
+    color: var(--muted); 
+    line-height: 21px; 
+    font-size: 1 rem; 
+    margin-top: 0.2rem;}
+
+.card-icon { 
+    height: 56px; 
+    border: 1px solid var(--line); 
+    background: #f9fafb; 
+    border-radius: .5rem; }
+
 .card-link {
     display: block;           /* gör hela kortet klickbart */
     text-decoration: none;    /* tar bort länk-stil */
@@ -302,8 +318,17 @@ button { cursor: pointer; font: inherit; }
   
 
 /* === Footer === */
-.site-footer { border-top: 1px solid var(--line); padding: 1.5rem 0; background: #232323; }
-.site-footer .wrap { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; }
+.site-footer { 
+    border-top: 1px solid var(--line); 
+    padding: 1.5rem 0; 
+    background: #232323; }
+
+.site-footer .wrap { 
+    display: flex; 
+    justify-content: space-between; 
+    gap: 1rem; 
+    flex-wrap: wrap; }
+
 .site-footer {
     background: #000;       /* svart bakgrund */
     color: #fff;
@@ -381,7 +406,6 @@ button { cursor: pointer; font: inherit; }
     margin-top: .25rem;
   }
 
-
   .video-wrapper {
     position: relative;
     padding-bottom: 56.25%; /* 16:9 format */
@@ -406,6 +430,30 @@ button { cursor: pointer; font: inherit; }
     border: 0;
   }
   
+
+  .galleri-wrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 format */
+    margin-top: 3rem;
+    margin-bottom: 3rem;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+    background: #000; /* valfritt: svart bakgrund innan videon laddar */
+    border-radius: 12px; /* rundade hörn om du vill */
+    border: 6px solid #ffffff; /* <-- Lägg till ram här */
+  box-shadow: 0px 4px 12px rgba(0,0,0,0.4); /* valfritt, skugga */
+}
+  
+  
+  .video-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+  }
   
 /* === Responsivitet === */
 @media (max-width: 900px) {
